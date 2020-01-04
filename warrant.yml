@@ -1,0 +1,33 @@
+server:
+  port: 12008
+
+spring:
+  application:
+    name: spottransaction-warrant
+  jpa:
+    hibernate:
+      ddl-auto: validate
+      naming:
+        physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+    properties:
+      hibernate:
+        show_sql: false
+        format_sql: false
+        use_sql_comments: false
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+  datasource:
+    url: jdbc:mysql://192.168.18.82:3306/trans_saas?useSSL=false
+    username: root
+    password: golden
+    driverClassName: com.mysql.jdbc.Driver
+    maxActive: 20
+    maxIdle: 8
+    minIdle: 8
+    initialSize: 10
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://192.168.18.58:1111/eureka/
+  instance:
+    prefer-ip-address: true
