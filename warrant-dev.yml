@@ -8,7 +8,7 @@ spring:
         format_sql: true
         use_sql_comments: true
   datasource:
-    url: jdbc:mysql://localhost:3306/saas_trade?useSSL=false
+    url: jdbc:mysql://localhost:3306/saas_trade?useSSL=false&characterEncoding=utf-8
     username: root
     password: 123456
 
