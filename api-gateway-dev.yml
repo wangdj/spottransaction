@@ -4,7 +4,7 @@ zuul:
   routes:
   # /myProduct/product/list -> /product/product/list
     aaaaaa:
-      path: /myProduct3/**
+      path: /myProduct4/**
       serviceId: product
       sensitiveHeaders:
   #简洁写法
